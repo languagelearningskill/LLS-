@@ -3,6 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
 <title>LLS</title>
+ <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a5c36">
 <style>
 :root{--bg:#0c0f24;--card:#161b3d;--gold:#f5c518;--txt:#fff;--mut:#a9b0d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -391,4 +393,6 @@ let h="";for(let p=0;p<10;p++){const d=S.done[`${li}-${ti}-${p}`],o=p==0||S.done
 const lz=SL.map((s,k)=>`<i style="left:${s[0]}%;top:${s[1]}%;font-size:${20+(k*7+p*3)%10}px;color:hsl(${(p*47+k*61)%360},100%,68%);transform:rotate(${RT[(k+p)%7]}deg)">${a[(p*3+k)%a.length]}</i>`).join("");
 h+=`<div class="lt ${d?"cl":o?"":"lk"}" style="--c:${COL[(ti+p)%12]}" ${o?`onclick="startQ(${p})"`:""}><div class="lz">${lz}</div><b>${p+1}</b><em>${o?(p<3?"Word":"Sentence"):"Locked"}</em></div>`}
 $("lt").innerHTML=h;go("lvl")}
-</script></body></html>
+</script>
+ <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}</script>
+</body></html>
